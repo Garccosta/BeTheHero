@@ -1,14 +1,7 @@
 const request = require('supertest');
 const app = require('../../src/app');
 const connection = require('../../src/database/connection');
-
-let ONG = {
-  name: "Cantinho do zé",
-  email: "zezinho@legal.com",
-  whatsapp: "0123456789",
-  city: "Maricá",
-  uf: "RJ"
-};
+const faker = require('../Factories/FakerFactory');
 
 describe('ONG', () => {
   beforeAll(async () => {
@@ -21,6 +14,8 @@ describe('ONG', () => {
   });
 
   it('should create a new ONG', async () => {
+    let ONG = faker.CreateFakeONG();
+    
     const response = await request(app)
     .post('/ongs')
     .send(ONG)
