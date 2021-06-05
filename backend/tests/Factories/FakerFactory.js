@@ -5,9 +5,9 @@ const Faker = {
     return {
       name: faker.company.companyName(),
       email: faker.internet.email(),
-      whatsapp: faker.phone.phoneNumberFormat(10),
+      whatsapp: faker.phone.phoneNumber().substring(0,10),
       city: faker.address.cityName(),
-      uf: faker.address.cityPrefix()
+      uf: faker.address.cityPrefix().substring(0,2)
     }
   }
 }
