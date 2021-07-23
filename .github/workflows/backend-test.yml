@@ -1,0 +1,28 @@
+name: Build & Test Back-end
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        run: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: cd backend && npm i
+      
+      - name: Test
+        run: cd backend && npm run test
