@@ -1,0 +1,21 @@
+{
+  "name": "BeTheHero",
+  "version": "1.0.0",
+  "description": "An open app made to help ONGs raise funds to their projects(made during Omnistack week 11).",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cd backend && npm install",
+    "start": "cd backend && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebGarcc/BeTheHero.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebGarcc/BeTheHero/issues"
+  },
+  "homepage": "https://github.com/WebGarcc/BeTheHero#readme"
+}
