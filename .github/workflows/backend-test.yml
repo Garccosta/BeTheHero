@@ -27,6 +27,9 @@ jobs:
 
       - name: Install dependencies
         run: cd backend && npm i
+        
+      - name: Create Swagger file
+        run: cd backend && npm run swagger
       
       - name: Test
         run: cd backend && npm run test
